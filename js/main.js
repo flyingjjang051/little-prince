@@ -171,3 +171,76 @@ portfolioTL
     opacity: 0,
     y: "+=300",
   });
+const portfolioListTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#portfolioList",
+    markers: true,
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    end: "bottom top",
+  },
+});
+portfolioListTL
+  .from("#portfolioList h2 .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from("#portfolioList .no", {
+    opacity: 0,
+  })
+  .from("#portfolioList h3 .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from("#portfolioList .linkList li", {
+    opacity: 0,
+    scale: 0,
+    stagger: {
+      each: 0.05,
+    },
+  });
+
+const roseTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#rose",
+    markers: true,
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    end: "bottom top",
+  },
+});
+roseTL
+  .from("#rose .main .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from(CSSRulePlugin.getRule("#main #rose .txtContents p strong:before"), {
+    cssRule: {
+      scaleX: 0,
+    },
+  })
+  .from("#rose .no", {
+    opacity: 0,
+  })
+  .from("#rose .sub .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from("#rose .prince", {
+    opacity: 0,
+    y: "+=300",
+  });
