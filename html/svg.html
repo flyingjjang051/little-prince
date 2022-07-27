@@ -29,21 +29,31 @@
     <div class="testBox">
       <ul class="test">
         <li>
-          <svg>
+          <svg class="real">
+            <circle cx="150" cy="150" r="140"></circle>
+          </svg>
+          <svg class="bg">
             <circle cx="150" cy="150" r="140"></circle>
           </svg>
           <span class="num">0</span>
         </li>
         <li>
-          <svg>
+          <svg class="real">
+            <circle cx="150" cy="150" r="140"></circle>
+          </svg>
+          <svg class="bg">
             <circle cx="150" cy="150" r="140"></circle>
           </svg>
           <span class="num">0</span>
         </li>
         <li>
-          <svg>
+          <svg class="real">
             <circle cx="150" cy="150" r="140"></circle>
           </svg>
+          <svg class="bg">
+            <circle cx="150" cy="150" r="140"></circle>
+          </svg>
+
           <span class="num">0</span>
         </li>
       </ul>
@@ -62,7 +72,7 @@
       //console.log(circle.getTotalLength()); // strpke-daharray 값을 출력할때
       // circle.getTotalLength() 는 dom 에 적용하는 메서드이다. jQuery로는 접근이 불가능 하다.
       // 만약 꼮 쓰고 싶으면 $("선택자")[0] 으로 쓰면 된다.
-      gsap.set(".test li circle", {
+      gsap.set(".test li .real", {
         strokeDasharray: circleTotal,
         strokeDashoffset: circleTotal,
       });
@@ -105,7 +115,7 @@
       });
       testTL
         .to(
-          ".test li:nth-child(1) circle",
+          ".test li:nth-child(1) .real",
           {
             strokeDashoffset: ((100 - test.aa) / 100) * circleTotal,
             duration: 2,
@@ -113,7 +123,7 @@
           0
         )
         .to(
-          ".test li:nth-child(2) circle",
+          ".test li:nth-child(2) .real",
           {
             strokeDashoffset: ((100 - test.bb) / 100) * circleTotal,
             duration: 2,
@@ -121,7 +131,7 @@
           0
         )
         .to(
-          ".test li:nth-child(3) circle",
+          ".test li:nth-child(3) .real",
           {
             strokeDashoffset: ((100 - test.cc) / 100) * circleTotal,
             duration: 2,

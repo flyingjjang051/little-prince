@@ -18,16 +18,33 @@
       transform: translate(-50%, -50%);
       font-weight: 300;
     }
+    &:nth-child(1) svg {
+      stroke: #f00;
+    }
+    &:nth-child(2) svg {
+      stroke: rgb(0, 114, 207);
+    }
+    &:nth-child(3) svg {
+      stroke: rgb(211, 144, 0);
+    }
   }
   svg {
-    stroke: #f00;
+    //stroke: #f00;
     width: 300px;
     height: 300px;
     fill: transparent;
     transform: rotate(-90deg);
+    position: relative;
     circle {
       stroke-width: 20px;
       stroke-linecap: round;
     }
+  }
+  .bg {
+    position: absolute;
+    stroke: rgb(218, 218, 218) !important;
+    left: 0;
+    top: 0;
+    z-index: -1;
   }
 }
