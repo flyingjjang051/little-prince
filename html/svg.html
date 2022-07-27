@@ -23,6 +23,7 @@
     <script src="../js/greensock/CSSRulePlugin.min.js"></script>
     <script src="../js/js.cookie.min.js"></script>
     <script src="../js/splitting.min.js"></script>
+    <script src="../js/lodash.js"></script>
   </head>
   <body>
     <div class="testBox">
@@ -55,6 +56,7 @@
         bb: 75,
         cc: 50,
       };
+
       const circle = $(".test li:nth-child(1) circle")[0];
       const circleTotal = circle.getTotalLength();
       //console.log(circle.getTotalLength()); // strpke-daharray 값을 출력할때
@@ -81,14 +83,14 @@
       });
 
       gsap.from(test, {
-        duration: 3,
         aa: 0,
         bb: 0,
         cc: 0,
+        duration: 2,
         onUpdate: function () {
-          $(".test li:nth-child(1)").text(test.aa.toFixed(2));
-          $(".test li:nth-child(2)").text(test.bb.toFixed(2));
-          $(".test li:nth-child(3)").text(test.cc.toFixed(2));
+          $(".test li:nth-child(1) .num").text(test.aa.toFixed(2));
+          $(".test li:nth-child(2) .num").text(test.bb.toFixed(2));
+          $(".test li:nth-child(3) .num").text(test.cc.toFixed(2));
         },
       });
     </script>
