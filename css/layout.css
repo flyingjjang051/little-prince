@@ -1,0 +1,556 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Bodoni Moda", "Noto Sans KR";
+  font-size: 1.6rem;
+  min-height: 5000px;
+  cursor: none;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.2vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(48, 43, 38);
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: rgba(48, 43, 38, 0.8);
+}
+
+.txtBox {
+  font-size: 4.8rem;
+  line-height: 1.5;
+  color: #111;
+}
+.txtBox.bold {
+  font-weight: 500;
+}
+
+.info .infoBox {
+  padding: 20px 30px;
+  border: 1px solid #d9d9d9;
+  margin: 10px 0;
+}
+
+.container {
+  width: 1200px;
+  margin: auto;
+}
+
+#header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 0 100px;
+  justify-content: space-between;
+  align-items: center;
+}
+#header #logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+#header #logo a {
+  display: block;
+  padding: 50px 0;
+}
+#header .btnAll {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#header .btnAll span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #111;
+}
+#header .btnAll span:nth-child(2) {
+  margin: 10px 0;
+}
+
+#main #mainVisual {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(254, 145, 145, 0.1) 0%, rgba(109, 147, 247, 0.05) 32%, rgba(161, 158, 255, 0) 100%);
+}
+#main #mainVisual .title {
+  font-size: 7vw;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: rgb(48, 43, 38);
+  font-family: "Roboto+Mono";
+}
+#main #mainVisual .subTitle {
+  margin-top: 50px;
+  font-size: 2.5vw;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: rgba(48, 43, 38, 0.8);
+  font-family: "Roboto+Mono";
+}
+#main #mainVisual .img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 80%;
+  z-index: -1;
+}
+#main #mainVisual .img img {
+  width: 33vw;
+  z-index: 2;
+  transform: rotateZ(50deg);
+}
+#main #introduce {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#main #introduce p {
+  word-break: keep-all;
+  width: 50%;
+}
+#main #introduce p strong {
+  font-size: 2.2vw;
+  font-weight: 500;
+}
+#main #introduce p.sub {
+  color: rgba(48, 43, 38, 0.8);
+  margin-top: 50px;
+  font-size: 1.2vw;
+}
+#main #introduce p.main {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  font-size: 2vw;
+}
+#main #introduce .no {
+  position: relative;
+  width: 100px;
+}
+#main #introduce .no:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  right: 0;
+  height: 1px;
+  top: 20px;
+  transform-origin: 0 50%;
+  background-color: rgb(126, 11, 17);
+}
+#main #introduce02 {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#main #introduce02 .doorBox {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}
+#main #introduce02 .doorBox .door02 {
+  width: 250px;
+  position: absolute;
+  left: 314px;
+  top: 23px;
+  perspective: 3500px;
+  transform-style: preserve-3d;
+  transition: all 1.5s ease;
+}
+#main #introduce02 .doorBox .door02 img {
+  width: 100%;
+  transform: rotateY(-70deg) translateZ(40px);
+  transform-origin: 100% 0;
+  box-shadow: 10px 10px 20px rgba(21, 95, 163, 0.15);
+}
+#main #introduce02 .doorBox .door {
+  width: 300px;
+  position: absolute;
+  left: 250px;
+  top: 0;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+#main #introduce02 .doorBox .door img {
+  width: 100%;
+  transform: translateZ(10px);
+}
+#main #introduce02 .no {
+  position: relative;
+  width: 100px;
+  padding: 10px;
+}
+#main #introduce02 .no:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  right: 0;
+  height: 1px;
+  top: 20px;
+  transform-origin: 0 50%;
+  background-color: rgb(126, 11, 17);
+}
+#main #introduce02 .me {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+  top: 40%;
+}
+#main #introduce02 .me > .intro {
+  color: rgb(48, 43, 38);
+  font-size: 2vw;
+}
+#main #introduce02 .me .info {
+  margin-top: 100px;
+  font-size: 1.4vw;
+}
+#main #portfolio .center {
+  text-align: center;
+  position: relative;
+}
+#main #portfolio .center .no {
+  position: relative;
+}
+#main #portfolio .center .no:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  top: 25px;
+  background-color: rgb(126, 11, 17);
+}
+#main #portfolio .center p {
+  word-break: keep-all;
+  width: 100%;
+}
+#main #portfolio .center p strong {
+  font-size: 2.2vw;
+  font-weight: 500;
+}
+#main #portfolio .center p.sub {
+  color: rgba(48, 43, 38, 0.8);
+  margin-top: 50px;
+  font-size: 1.2vw;
+  line-height: 1.5em;
+}
+#main #portfolio .center p.main {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  font-size: 2vw;
+  line-height: 1.5em;
+}
+#main #portfolio .center .img02 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  top: 20%;
+}
+#main #portfolio .center .img02 img {
+  width: 20vw;
+}
+#main #portfolio ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+#main #portfolio ul li {
+  padding: 0 100px;
+  position: relative;
+}
+#main #portfolio ul li:hover {
+  transition: all 0.5s ease;
+}
+#main #portfolio ul li:hover .img {
+  transform: rotateZ(15deg);
+  transition: all 0.5s ease;
+}
+#main #portfolio ul li:hover:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  background: linear-gradient(0deg, rgba(255, 163, 196, 0.5) 0%, rgba(255, 234, 188, 0.2) 100%);
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+#main #portfolio ul li:hover .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s ease;
+  font-size: 2vw;
+  opacity: 1;
+}
+#main #portfolio ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: linear-gradient(0deg, rgba(255, 163, 196, 0.5) 0%, rgba(255, 234, 188, 0.2) 100%);
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s ease;
+}
+#main #portfolio ul li .title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  font-weight: 700;
+}
+#main #portfolio ul li a .img {
+  width: 200px;
+  transition: all 0.5s ease;
+}
+#main #portfolio ul li a .img img {
+  width: 100%;
+}
+#main #rose {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#main #rose .right {
+  right: 0;
+}
+#main #rose .right .no {
+  position: relative;
+}
+#main #rose .right .no:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  top: 85px;
+  right: 41%;
+  background-color: rgb(126, 11, 17);
+}
+#main #rose .right p {
+  word-break: keep-all;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+#main #rose .right p strong {
+  font-size: 2.2vw;
+  font-weight: 500;
+}
+#main #rose .right p.sub {
+  color: rgba(48, 43, 38, 0.8);
+  font-size: 1.2vw;
+  margin-top: 130px;
+}
+#main #rose .right p.main {
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  font-size: 2vw;
+}
+#main #rose .img02 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12%;
+  z-index: -1;
+}
+#main #rose .img02 img {
+  width: 30vw;
+  z-index: 2;
+}
+#main #skill {
+  padding-bottom: 100px;
+}
+#main #skill h1 {
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+#main #skill .skillBox {
+  margin-top: 100px;
+}
+#main #skill .skillBox ul {
+  display: flex;
+  justify-content: center;
+}
+#main #skill .skillBox ul li {
+  margin: 0 50px;
+  position: relative;
+}
+#main #skill .skillBox ul li .img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+#main #skill .skillBox ul li .img img {
+  width: 100%;
+  opacity: 1;
+}
+#main #skill .skillBox ul li .skill {
+  position: relative;
+}
+#main #skill .skillBox ul li .skill svg {
+  width: 350px;
+  height: 350px;
+  transform: rotate(-90deg);
+  position: relative;
+}
+#main #skill .skillBox ul li .skill svg circle {
+  fill: transparent;
+  stroke: rgba(161, 129, 103, 0.2);
+  stroke-width: 3px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  stroke-linecap: round;
+}
+#main #skill .skillBox ul li .skill .txt {
+  position: absolute;
+  top: 135%;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: 32px;
+  font-weight: 500;
+  color: rgba(48, 43, 38, 0.8);
+}
+#main #skill .skillBox ul li h3 {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 50px;
+  color: rgb(48, 43, 38);
+}
+#main #contact {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(254, 145, 145, 0.1) 0%, rgba(109, 147, 247, 0.05) 32%, rgba(161, 158, 255, 0) 100%);
+  overflow: hidden;
+}
+#main #contact .airplane {
+  width: 250px;
+  position: absolute;
+  left: 0;
+  top: 30%;
+  transform: translateX(1900px);
+  transition: all 5s ease;
+}
+#main #contact .airplane img {
+  width: 100%;
+}
+#main #contact .img02 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+  z-index: -1;
+}
+#main #contact .img02 img {
+  width: 36vw;
+  z-index: 2;
+}
+#main #contact .me {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+  top: 50%;
+}
+#main #contact .me .no {
+  position: relative;
+  width: 100px;
+}
+#main #contact .me .no:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 5px;
+  right: 0;
+  height: 1px;
+  top: 20px;
+  transform-origin: 0 50%;
+  background-color: rgb(126, 11, 17);
+}
+#main #contact .me > .intro {
+  color: rgb(48, 43, 38);
+  font-size: 2vw;
+}
+#main #contact .me .info {
+  margin-top: 100px;
+  font-size: 1.4vw;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 100%;
+  position: fixed;
+  left: 300px;
+  top: 300px;
+  user-select: none;
+  pointer-events: none;
+  z-index: 9999999;
+  transform: translate(-50%, -50%);
+  cursor: none;
+  transition: background-color 0.25s ease, color 0.25s ease, font-size 0.25s ease, font-weight 0.25s ease, transform 0.25s ease;
+}
+.cursor .txt {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+}
+.cursor img {
+  width: 30px;
+}
