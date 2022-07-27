@@ -31,6 +31,7 @@ const mainVisualTL = gsap.timeline({
     markers: true,
     scrub: 1,
     start: "top top",
+    end: "bottom+=200% top",
     pin: true,
   },
 });
@@ -53,6 +54,9 @@ mainVisualTL
     stagger: {
       each: 0.05,
     },
+  })
+  .from("#mainVisual", {
+    duration: 5,
   });
 
 const introduceTL = gsap.timeline({
@@ -78,10 +82,21 @@ introduceTL
       each: 0.05,
     },
   })
-  .from("#introduce .main strong .char", {
-    x: "+=100",
+  .from(CSSRulePlugin.getRule("#main #introduce .main strong:before"), {
+    cssRule: {
+      scaleX: 0,
+    },
+  })
+  .from("#introduce .no", {
+    opacity: 0,
+  })
+  .from("#introduce .sub .char", {
     opacity: 0,
     stagger: {
       each: 0.05,
     },
+  })
+  .from("#introduce .imgContents .prince", {
+    scale: 0,
+    opacity: 0,
   });
