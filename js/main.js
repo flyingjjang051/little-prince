@@ -290,6 +290,8 @@ skillTL
     js: 0,
     design: 0,
     duration: 5,
+    onComplete: function () {},
+
     onUpdate: function () {
       $("#skill .skillBox li:nth-child(1) .num .txt").text(Math.round(mySkill.html));
       $("#skill .skillBox li:nth-child(2) .num .txt").text(Math.round(mySkill.js));
