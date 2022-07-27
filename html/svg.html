@@ -66,33 +66,83 @@
         strokeDasharray: circleTotal,
         strokeDashoffset: circleTotal,
       });
-      gsap.to(".test li:nth-child(1) circle", {
-        strokeDashoffset: ((100 - test.aa) / 100) * circleTotal,
-        duration: 2,
-        ease: "bounce",
-      });
-      gsap.to(".test li:nth-child(2) circle", {
-        strokeDashoffset: ((100 - test.bb) / 100) * circleTotal,
-        duration: 2,
-        ease: "bounce",
-      });
-      gsap.to(".test li:nth-child(3) circle", {
-        strokeDashoffset: ((100 - test.cc) / 100) * circleTotal,
-        duration: 2,
-        ease: "bounce",
-      });
+      // gsap.to(".test li:nth-child(1) circle", {
+      //   strokeDashoffset: ((100 - test.aa) / 100) * circleTotal,
+      //   duration: 2,
+      //   ease: "bounce",
+      // });
+      // gsap.to(".test li:nth-child(2) circle", {
+      //   strokeDashoffset: ((100 - test.bb) / 100) * circleTotal,
+      //   duration: 2,
+      //   ease: "bounce",
+      // });
+      // gsap.to(".test li:nth-child(3) circle", {
+      //   strokeDashoffset: ((100 - test.cc) / 100) * circleTotal,
+      //   duration: 2,
+      //   ease: "bounce",
+      // });
 
-      gsap.from(test, {
-        aa: 0,
-        bb: 0,
-        cc: 0,
-        duration: 2,
-        onUpdate: function () {
-          $(".test li:nth-child(1) .num").text(test.aa.toFixed(2));
-          $(".test li:nth-child(2) .num").text(test.bb.toFixed(2));
-          $(".test li:nth-child(3) .num").text(test.cc.toFixed(2));
+      // gsap.from(test, {
+      //   aa: 0,
+      //   bb: 0,
+      //   cc: 0,
+      //   duration: 2,
+      //   onUpdate: function () {
+      //     $(".test li:nth-child(1) .num").text(test.aa.toFixed(2));
+      //     $(".test li:nth-child(2) .num").text(test.bb.toFixed(2));
+      //     $(".test li:nth-child(3) .num").text(test.cc.toFixed(2));
+      //   },
+      // });
+      const testTL = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".testBox",
+          markers: true,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+          pin: true,
         },
       });
+      testTL
+        .to(
+          ".test li:nth-child(1) circle",
+          {
+            strokeDashoffset: ((100 - test.aa) / 100) * circleTotal,
+            duration: 2,
+          },
+          0
+        )
+        .to(
+          ".test li:nth-child(2) circle",
+          {
+            strokeDashoffset: ((100 - test.bb) / 100) * circleTotal,
+            duration: 2,
+          },
+          0
+        )
+        .to(
+          ".test li:nth-child(3) circle",
+          {
+            strokeDashoffset: ((100 - test.cc) / 100) * circleTotal,
+            duration: 2,
+          },
+          0
+        )
+        .from(
+          test,
+          {
+            aa: 0,
+            bb: 0,
+            cc: 0,
+            duration: 2,
+            onUpdate: function () {
+              $(".test li:nth-child(1) .num").text(test.aa.toFixed(2));
+              $(".test li:nth-child(2) .num").text(test.bb.toFixed(2));
+              $(".test li:nth-child(3) .num").text(test.cc.toFixed(2));
+            },
+          },
+          0
+        );
     </script>
   </body>
 </html>
