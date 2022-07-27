@@ -1,5 +1,10 @@
 //popup
 //$(document).ready(function () {});
+const mySkill = {
+  html: 90,
+  js: 80,
+  design: 85,
+};
 
 const disappear = function () {
   gsap.to("#popup", {
@@ -243,4 +248,51 @@ roseTL
   .from("#rose .prince", {
     opacity: 0,
     y: "+=300",
+  });
+const skillTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#skill",
+    markers: true,
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    end: "bottom top",
+  },
+});
+skillTL
+  .from("#skill h2 .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+
+  .from("#skill .no", {
+    opacity: 0,
+  })
+  .from("#skill h3 .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from("#skill .skillBox ul li", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from(mySkill, {
+    html: 0,
+    js: 0,
+    design: 0,
+    duration: 5,
+    onUpdate: function () {
+      $("#skill .skillBox li:nth-child(1) .num .txt").text(Math.round(mySkill.html));
+      $("#skill .skillBox li:nth-child(2) .num .txt").text(Math.round(mySkill.js));
+      $("#skill .skillBox li:nth-child(3) .num .txt").text(Math.round(mySkill.design));
+    },
   });
