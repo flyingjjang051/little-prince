@@ -236,7 +236,6 @@ h3 strong {
   transform-origin: 0 50%;
 }
 #main #portfolio .txtContents {
-  overflow-x: hidden;
   padding-top: 100px;
 }
 #main #portfolio .center {

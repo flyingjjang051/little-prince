@@ -100,3 +100,74 @@ introduceTL
     scale: 0,
     opacity: 0,
   });
+
+const introduce02TL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#introduce02",
+    markers: true,
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    end: "bottom top",
+  },
+});
+introduce02TL
+  .to("#introduce02 .door-in", {
+    rotationY: -45,
+  })
+  .from("#introduce02 .intro .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from(CSSRulePlugin.getRule("#main #introduce02 .me strong:before"), {
+    cssRule: {
+      scaleX: 0,
+    },
+    stagger: {
+      each: 1,
+    },
+  });
+
+const portfolioTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#portfolio",
+    markers: true,
+    pin: true,
+    scrub: 1,
+    start: "top top",
+    end: "bottom top",
+  },
+});
+portfolioTL
+  .from("#portfolio .main .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from(CSSRulePlugin.getRule("#main #portfolio .main strong:before"), {
+    cssRule: {
+      scaleX: 0,
+    },
+    stagger: {
+      each: 1,
+    },
+  })
+  .from("#portfolio .sub .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.05,
+    },
+  })
+  .from("#portfolio .no", {
+    opacity: 0,
+  })
+  .from("#portfolio .prince", {
+    opacity: 0,
+    y: "+=300",
+  });
