@@ -265,7 +265,7 @@ h3 strong {
   height: 700px;
 }
 #main #portfolioList {
-  margin-top: 200px;
+  padding-top: 100px;
 }
 #main #portfolioList .container {
   display: block;
@@ -378,6 +378,7 @@ h3 strong {
   width: 25vw;
 }
 #main #skill {
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 #main #skill h2 {

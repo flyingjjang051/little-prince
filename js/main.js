@@ -68,7 +68,7 @@ const introduceTL = gsap.timeline({
   scrollTrigger: {
     trigger: "#introduce",
     markers: true,
-    scrub: 1,
+    scrub: 1.5,
     start: "top top",
     pin: true,
   },
@@ -76,6 +76,7 @@ const introduceTL = gsap.timeline({
 introduceTL
   .from("#introduce .main p .char", {
     opacity: 0,
+    x: "+=100",
     stagger: {
       each: 0.05,
     },
@@ -97,6 +98,7 @@ introduceTL
   })
   .from("#introduce .sub .char", {
     opacity: 0,
+    x: "+=100",
     stagger: {
       each: 0.05,
     },
@@ -104,6 +106,9 @@ introduceTL
   .from("#introduce .imgContents .prince", {
     scale: 0,
     opacity: 0,
+  })
+  .from("#introduce", {
+    duration: 10,
   });
 
 const introduce02TL = gsap.timeline({
@@ -134,6 +139,9 @@ introduce02TL
     stagger: {
       each: 1,
     },
+  })
+  .from("#introduce02", {
+    duration: 10,
   });
 
 const portfolioTL = gsap.timeline({
@@ -210,6 +218,9 @@ portfolioListTL
     stagger: {
       each: 0.05,
     },
+  })
+  .from("#portfolioList", {
+    duration: 10,
   });
 
 const roseTL = gsap.timeline({
@@ -296,6 +307,9 @@ skillTL
       $("#skill .skillBox li:nth-child(2) .num .txt").text(Math.round(mySkill.js));
       $("#skill .skillBox li:nth-child(3) .num .txt").text(Math.round(mySkill.design));
     },
+  })
+  .from("#skill", {
+    duration: 10,
   });
 
 const contactTL = gsap.timeline({
