@@ -48,3 +48,18 @@
     z-index: -1;
   }
 }
+
+.testBox02 {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  svg {
+    stroke: #f00;
+    path {
+      width: 400px;
+      stroke-width: 0.25px;
+      fill: transparent;
+    }
+  }
+}

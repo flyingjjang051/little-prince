@@ -291,10 +291,57 @@ skillTL
     design: 0,
     duration: 5,
     onComplete: function () {},
-
     onUpdate: function () {
       $("#skill .skillBox li:nth-child(1) .num .txt").text(Math.round(mySkill.html));
       $("#skill .skillBox li:nth-child(2) .num .txt").text(Math.round(mySkill.js));
       $("#skill .skillBox li:nth-child(3) .num .txt").text(Math.round(mySkill.design));
     },
+  });
+
+const contactTL = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#contact",
+    start: "top top",
+    end: "bottom top",
+    pin: true,
+    scrub: 1,
+  },
+});
+contactTL
+  .from("#contact .txtContents .main .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.1,
+    },
+  })
+  .from(CSSRulePlugin.getRule("#main #contact .main strong::before"), {
+    cssRule: {
+      scaleX: 0,
+    },
+  })
+  .from("#contact .no", {
+    opacity: 0,
+  })
+  .from("#contact .txtContents .sub .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.1,
+    },
+  })
+  .from("#contact .info .char", {
+    opacity: 0,
+    x: "+=100",
+    stagger: {
+      each: 0.1,
+    },
+  })
+  .to("#contact .ship", {
+    opacity: 0,
+    y: -1300,
+    duration: 5,
+  })
+  .from("#contact .prince", {
+    opacity: 0,
   });
